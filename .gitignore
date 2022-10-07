@@ -1,0 +1,9 @@
+# Exclude compiled files
+dist
+src/server/client-dist
+
+# Exclude test coverage report
+coverage
+
+# Exclude dependencies
+node_modules/
