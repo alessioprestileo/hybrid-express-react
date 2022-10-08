@@ -8,7 +8,7 @@
     "node": "14.x.x"
   },
   "scripts": {
-    "deploy": "gcloud app deploy",
+    "deploy": "gcloud app deploy --project alessiopweb",
     "build:client": "webpack --config webpack.config.prod.js",
     "build:server": "tsc --project tsconfig.server.prod.json --outDir dist",
     "format": "prettier --write .",
