@@ -14,12 +14,17 @@
     "format": "prettier --write .",
     "gcp-build": "npm run build:server && npm run build:client",
     "lint": "eslint .",
-    "pre-push": "lint-staged && npm run type-check && npm run test",
+    "pre-commit": "lint-staged",
+    "pre-push": "npm run type-check && npm run test",
     "prepare": "husky install",
     "start:client": "webpack serve --config webpack.config.dev.js",
     "start:server": "cross-env NODE_ENV=DEVELOPMENT ts-node-dev --project tsconfig.server.dev.json ./index.ts",
     "test": "jest",
     "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": "eslint",
+    "*": "prettier --write"
   },
   "dependencies": {
     "express": "^4.16.3",
