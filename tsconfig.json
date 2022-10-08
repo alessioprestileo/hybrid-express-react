@@ -6,9 +6,5 @@
     "strict": true,
     "target": "es6"
   },
-  "include": [
-    "index.ts",
-    "src",
-    "jest.config.ts"
-  ]
+  "include": ["index.ts", "src", "jest.config.ts"]
 }
