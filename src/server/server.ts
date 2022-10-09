@@ -7,7 +7,7 @@ const app = express();
 const publicDir =
   process.env.NODE_ENV === "DEVELOPMENT" ? "public-dev" : "public";
 const publicPath = path.join(__dirname, publicDir);
-app.use(express.static(publicPath));
+app.use(express.static(publicPath, { etag: true }));
 
 app.get("/api", (_req, res) => {
   res.send("🎉 Hello TypeScript! 🎉");

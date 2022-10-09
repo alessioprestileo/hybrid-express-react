@@ -5,18 +5,20 @@
   "license": "See LICENSE file",
   "author": "Alessio Prestileo",
   "engines": {
-    "node": "14.x.x"
+    "node": "16.x.x",
+    "npm": "8.x.x"
   },
   "scripts": {
     "deploy": "gcloud app deploy --project alessiopweb",
     "build:client": "webpack --config webpack.config.prod.js",
     "build:server": "tsc --project tsconfig.server.prod.json --outDir dist",
     "format": "prettier --write .",
-    "gcp-build": "npm run build:server && npm run build:client",
+    "build": "npm run build:server && npm run build:client",
     "lint": "eslint .",
     "pre-commit": "lint-staged",
     "pre-push": "npm run type-check && npm run test",
     "prepare": "husky install",
+    "start": "node ./index.js",
     "start:client": "webpack serve --config webpack.config.dev.js",
     "start:server": "cross-env NODE_ENV=DEVELOPMENT ts-node-dev --project tsconfig.server.dev.json ./index.ts",
     "test": "jest",
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "express": "^4.16.3",
+    "npm": "8.x.x",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
