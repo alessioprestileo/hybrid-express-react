@@ -9,11 +9,10 @@
     "npm": "8.x.x"
   },
   "scripts": {
-    "deploy": "gcloud app deploy --project alessiopweb",
     "build:client": "webpack --config webpack.config.prod.js",
     "build:server": "tsc --project tsconfig.server.prod.json --outDir dist",
     "format": "prettier --write .",
-    "build": "npm run build:server && npm run build:client",
+    "build": "npm run build:server && npm run build:client && ts-node src/scripts/finalizeDistDir.ts",
     "lint": "eslint .",
     "pre-commit": "lint-staged",
     "pre-push": "npm run type-check && npm run test",
