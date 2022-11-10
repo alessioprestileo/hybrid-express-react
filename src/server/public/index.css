@@ -1,0 +1,82 @@
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+}
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+}
+
+ul.alep {
+  display: flex;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+
+li {
+  display: flex;
+}
+
+a.alep {
+  text-decoration: none;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.page.dark {
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 25, 25, 10),
+    rgba(29, 67, 80, 20),
+    rgba(29, 67, 80, 40),
+    rgba(29, 57, 80, 60),
+    rgba(29, 86, 80, 60),
+    rgba(29, 67, 80, 40),
+    rgba(29, 67, 80, 20),
+    rgba(25, 25, 25, 10)
+  );
+}
+
+.page.light {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 60),
+    rgba(215, 225, 215, 95),
+    rgba(205, 210, 205, 90),
+    rgba(200, 205, 200, 85),
+    rgba(200, 205, 200, 85),
+    rgba(205, 210, 205, 90),
+    rgba(215, 225, 215, 95),
+    rgba(255, 255, 255, 60)
+  );
+}
+
+.navbar.alep {
+  box-shadow: rgb(5 5 5) 0px 12px 30px -10px;
+  justify-content: center;
+  padding: 0;
+}
+
+.menu-item:first-of-type {
+  border-left: 2px solid rgba(30, 30, 50, 100);
+}
+
+.menu-item {
+  align-items: center;
+  padding: 1rem;
+  border-right: 2px solid rgba(30, 30, 50, 100);
+}

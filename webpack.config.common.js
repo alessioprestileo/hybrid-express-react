@@ -5,7 +5,7 @@ module.exports = {
   entry: "./src/client/index.tsx",
   output: {
     filename: "bundle.[fullhash].js",
-    path: path.resolve(__dirname, "dist/src/server/public"),
+    path: path.resolve(__dirname, "dist/src/server/public/react"),
     clean: true,
   },
   resolve: {
